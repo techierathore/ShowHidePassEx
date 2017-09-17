@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:ef="clr-namespace:ShowHidePassEx.Effects" 
+    x:Class="ShowHidePassEx.LoginPage">
+	<ContentPage.Content>
+      <StackLayout Padding="30" Spacing="10" VerticalOptions="CenterAndExpand">
+        <Entry Placeholder="User name" Text="User Name" />
+        <Entry IsPassword="true" Placeholder="Password" Text="Password">
+            <Entry.Effects>
+                <ef:ShowHidePassEffect />
+            </Entry.Effects>
+        </Entry>
+        <Button Text="Sign Up" />
+    </StackLayout>
+	</ContentPage.Content>
+</ContentPage>
