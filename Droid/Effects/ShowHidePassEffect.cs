@@ -42,12 +42,14 @@ namespace ShowHidePassEx.Droid.Effects
 					if (editText.TransformationMethod == null)
 					{
 						editText.TransformationMethod = PasswordTransformationMethod.Instance;
-                        editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, Resource.Drawable.HidePass, 0);
+                                                editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, Resource.Drawable.HidePass, 0);
+			                         editText.SetSelection(editText.Length());
 					}
 					else
 					{
 						editText.TransformationMethod = null;
-                        editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, Resource.Drawable.ShowPass, 0);
+                                               editText.SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, Resource.Drawable.ShowPass, 0);
+			                       editText.SetSelection(editText.Length());
 					}
 
 					return true;
